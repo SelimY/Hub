@@ -15,7 +15,7 @@
 
 # --- Henüz kurulmamış siteler: site açılınca baştaki # işaretini kaldırın ---
 # 2. Milestone Tracker (feature/multi-user) -> selimy-mst2
-# /mst2/*         https://selimy-mst2.netlify.app/:splat         200!
+/mst2/*         https://selimy-mst2.netlify.app/:splat         200!
 
 # 3. Investor -> selimy-investor
 # /investor/*     https://selimy-investor.netlify.app/:splat     200!
