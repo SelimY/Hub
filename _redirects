@@ -1,0 +1,30 @@
+# selimy.netlify.app — Hub yönlendirmeleri
+#
+# 200 = proxy (rewrite): adres çubuğunda selimy.netlify.app/... kalır.
+# ! = aynı yolda bir dosya olsa bile kuralı zorla uygula.
+#
+# NOT: Netlify kural eşleştirirken sondaki "/" işaretini dikkate almaz.
+# Bu yüzden "/mst -> /mst/ 301" gibi kurallar sonsuz döngüye girer; eklemeyin.
+# Hub sayfasındaki linkler zaten "/" ile bitiyor.
+
+# Eski adres -> yeni yol (eski linkler kırılmasın)
+/milestone-tracker/*   /mst/:splat   301!
+
+# 1. Milestone Tracker (main)  -> selimy-mst
+/mst/*          https://selimy-mst.netlify.app/:splat          200!
+
+# --- Henüz kurulmamış siteler: site açılınca baştaki # işaretini kaldırın ---
+# 2. Milestone Tracker (feature/multi-user) -> selimy-mst2
+# /mst2/*         https://selimy-mst2.netlify.app/:splat         200!
+
+# 3. Investor -> selimy-investor
+# /investor/*     https://selimy-investor.netlify.app/:splat     200!
+
+# 4. CMAP -> selimy-cmap
+# /cmap/*         https://selimy-cmap.netlify.app/:splat         200!
+
+# 5. LinkDB -> selimy-linkdb
+# /linkdb/*       https://selimy-linkdb.netlify.app/:splat       200!
+
+# 6. Post Archive (gallery-dl) -> selimy-postarchive
+# /postarchive/*  https://selimy-postarchive.netlify.app/:splat  200!
